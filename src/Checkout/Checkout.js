@@ -1,11 +1,21 @@
 import React from 'react';
-import cart-solid from "./shopping-cart-solid.svg";
+import cartSolid from "./shopping-cart-solid.svg";
 
 function Checkout(props) {
+
+    const cartBase = props.base.filter((product) => {
+        if(product.bought === true) {
+            return true
+        }
+        return false
+    });
+
     return (
         <div className='checkout'>
-            <img src={cart-solid}/>
-            <span className='counter'>0</span>
+            <img src={cartSolid}/>
+            <span className='counter'>
+                {cartBase.length}
+            </span>
         </div>
     );
 }

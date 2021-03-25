@@ -1,14 +1,14 @@
 import React from 'react';
-import Logo from "./Logo";
+import Logo from "./Logo/Logo";
 import Menu from "./Menu";
-import Checkout from "./Checkout";
+import Checkout from "./Checkout/Checkout";
 
 function Header(props) {
     return (
         <div className="header">
-            <Logo/>
-            <Menu/>
-            <Checkout/>
+            <Logo />
+            <Menu />
+            <Checkout base={props.base}/>
         </div>
     );
 }
